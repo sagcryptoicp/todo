@@ -1,0 +1,6 @@
+// Version: 1.0.0
+type ToDo = {completed : Bool; description : Text};
+actor {
+  stable var entries : [(Nat, ToDo)];
+  stable var nextId : Nat
+};

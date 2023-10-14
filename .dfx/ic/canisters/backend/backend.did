@@ -1,0 +1,13 @@
+type ToDo = 
+ record {
+   completed: bool;
+   description: text;
+ };
+type Backend = 
+ service {
+   addTodo: (text) -> (nat);
+   clearCompleted: () -> ();
+   completeTodo: (nat) -> ();
+   getTodos: () -> (vec ToDo) query;
+ };
+service : () -> Backend
